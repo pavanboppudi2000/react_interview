@@ -25,8 +25,8 @@ class InterviewerList extends Component {
     // console.log(this.state.list);
     return (
       <div>
-        <h2>All Interviews</h2>
-        <Router>
+        <h2>All Interviewers</h2>
+        {/* <Router>
           <Link to="/newinterviewer">New Interviewer </Link>
 
           <Switch>
@@ -36,7 +36,8 @@ class InterviewerList extends Component {
               component={NewInterviewer}
             ></Route>
           </Switch>
-        </Router>
+        </Router> */}
+        <a href="http://localhost:3000/newinterviewer">New Interviewer</a>
         {this.state.list.map((lio) => (
           <div key={lio.id}>
             <h3>Email : {lio.email}</h3>

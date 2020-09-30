@@ -28,8 +28,8 @@ class IntervieweeList extends Component {
     // console.log(this.state.list);
     return (
       <div>
-        <h2>All Interviews</h2>
-        <Router>
+        <h2>All Interviewees</h2>
+        {/* <Router>
           <Link to="/newinterviewee">New Interviewee </Link>
 
           <Switch>
@@ -39,14 +39,23 @@ class IntervieweeList extends Component {
               component={Newinterviewee}
             ></Route>
           </Switch>
-        </Router>
+        </Router>  */}
+        <a href="http://localhost:3000/newinterviewee">New Interviewee</a>
+
         {this.state.list.map((lio) => (
           <div key={lio.id}>
             <h3>Email : {lio.email}</h3>
             <h3>Name : {lio.name}</h3>
             <h3>College :{lio.clg}</h3>
             <h3>CGPA : {lio.cgpa}</h3>
-            <h3> {this.state.resumes[lio.id]}</h3>
+            <p>
+              <a
+                href={"http://localhost:3001/" + this.state.resumes[lio.id]}
+                target="_blank"
+              >
+                Resume link
+              </a>
+            </p>
           </div>
         ))}
       </div>

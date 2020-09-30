@@ -19,12 +19,10 @@ class Newinterviewer extends Component {
       })
       .then((response) => {
         console.log(response);
-        if (response["eor"].length === 1)
-          alert("Successfull in Interviewer Creation");
+        alert("Successfull in Interviewer Creation");
       })
       .catch((error) => {
         console.log(error);
-        alert("Failure in creating Interviewer, Try again");
       });
     event.preventDefault();
   }
